@@ -9,12 +9,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 });
 
-app.get('/register', (req, res) => {
-  res.send('This will become the register page.')
+app.get('/profile', (req, res) => {
+  res.send('This will become the profile page.')
 });
 
-app.get('/login', (req, res) => {
-  res.send('This will become the login page.')
+app.get('/create', (req, res) => {
+  res.send('This will become the create profile page.')
 });
 
 app.use(function (req, res, next) {
