@@ -16,15 +16,21 @@ app.get('/', (req, res) => {
   res.render('index', {foo: 'FOO'});
 });
 
-
-
 app.get('/profile', (req, res) => {
-  res.send('This will become the profile page.')
+  res.render('profile', {foo: 'FOO'});
 });
 
 app.get('/create', (req, res) => {
-  res.send('This will become the create profile page.')
+  res.render('create', {foo: 'FOO'});
 });
+
+// app.get('/profile', (req, res) => {
+//   res.send('This will become the profile page.')
+// });
+
+// app.get('/create', (req, res) => {
+//   res.send('This will become the create profile page.')
+// });
 
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
