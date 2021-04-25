@@ -7,9 +7,16 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
 
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// });
+
+
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.render('index', {foo: 'FOO'});
 });
+
+
 
 app.get('/profile', (req, res) => {
   res.send('This will become the profile page.')
