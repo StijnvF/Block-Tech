@@ -6,23 +6,39 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// });
-
+const users = [
+  {
+    username: 'Victor', 
+    age: '22',
+    city: 'Amsterdam'
+  },
+  {
+    username: 'Stijn', 
+    age: '23',
+    city: 'Purmerend'
+  },
+  {
+    username: 'Peter', 
+    age: '31',
+    city: 'Utercht'
+  }
+]
 
 app.get('/', (req, res) => {
-  res.render('index', {foo: 'FOO'});
+  res.render('index', { users });
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {foo: 'FOO'});
+  res.render('profile', { loggedIn: true, username: 'WoeStijn' });
 });
 
 app.get('/create', (req, res) => {
   res.render('create', {foo: 'FOO'});
 });
+
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// });
 
 // app.get('/profile', (req, res) => {
 //   res.send('This will become the profile page.')
