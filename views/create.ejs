@@ -1,5 +1,86 @@
 <%- include('partials/head') -%>
+
 <body>
-    <p>nog even testen</p>
+    <form action="create"></form>
+
+    <section>
+        <h2>Wat is je naam?</h2>
+        <ul>
+            <li>
+                <label for="vname">Voornaam:</label>
+                <input type="text" id="name" name="name" placeholder="Peter">
+            </li>
+            <li>
+                <label for="aname">Achternaam:</label>
+                <input type="text" id="name" name="name" placeholder="Brugman">
+            </li>
+        </ul>
+        <h2>Wat is je leeftijd?</h2>
+        <ul>
+            <li>
+                <label for="leeftijd">Geboorte datum:</label>
+                <input type="date" id="leeftijd" name="leeftijd">
+            </li>
+        </ul>
+        <h2>Wat is je favoriete keuken?</h2>
+        <ul>
+            <li>
+                <label for="keuken">Italiaans</label>
+                <input type="radio" name="keuken" id="radio1">
+            </li>
+            <li>
+                <label for="keuken">Indisch</label>
+                <input type="radio" name="keuken" id="radio2">
+            </li>
+            <li>
+                <label for="keuken">Frans</label>
+                <input type="radio" name="keuken" id="radio3">
+            </li>
+            <li>
+                <label for="keuken">Spaans</label>
+                <input type="radio" name="keuken" id="radio4">
+            </li>
+            <li>
+                <label for="keuken">Grieks</label>
+                <input type="radio" name="keuken" id="radio5">
+            </li>
+            <li>
+                <label for="keuken">Mexicaans</label>
+                <input type="radio" name="keuken" id="radio6">
+            </li>
+            <li>
+                <label for="keuken">Japans</label>
+                <input type="radio" name="keuken" id="radio7">
+            </li>
+            <li>
+                <label for="keuken">Chinees</label>
+                <input type="radio" name="keuken" id="radio8">
+            </li>
+            <li>
+                <label for="keuken">Thais</label>
+                <input type="radio" name="keuken" id="radio9">
+            </li>
+            <li>
+                <label for="keuken">Indonesisch</label>
+                <input type="radio" name="keuken" id="radio10">
+            </li>
+        </ul>
+
+        <h2>Voeg een foto toe</h2>
+        <ul>
+            <li>
+                <label for="upload">Zoek je mooiste foto's uit</label>
+                <input type="file" name="upload" id="upload" placeholder="Kies bestand"
+                    accept="image/png, image/jpeg, image/gif" />
+            </li>
+
+        </ul>
+
+    </section>
+
+
+
+
 </body>
+
 </html>
