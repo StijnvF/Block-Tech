@@ -6,34 +6,40 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'))
 
-const users = [
-  {
-    username: 'Victor', 
+const users = [{
+    username: 'Victor',
     age: '22',
     city: 'Amsterdam'
   },
   {
-    username: 'Stijn', 
+    username: 'Stijn',
     age: '23',
     city: 'Purmerend'
   },
   {
-    username: 'Peter', 
+    username: 'Peter',
     age: '31',
     city: 'Utercht'
   }
 ]
 
 app.get('/', (req, res) => {
-  res.render('index', { users });
+  res.render('index', {
+    users
+  });
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', { loggedIn: true, username: 'WoeStijn' });
+  res.render('profile', {
+    loggedIn: true,
+    username: 'WoeStijn'
+  });
 });
 
 app.get('/create', (req, res) => {
-  res.render('create', {foo: 'FOO'});
+  res.render('create', {
+    foo: 'FOO'
+  });
 });
 
 app.use(function (req, res, next) {
