@@ -24,22 +24,15 @@ const users = [{
 ]
 
 app.get('/', (req, res) => {
-  res.render('index', {
-    users
-  });
+  res.render('index', {users});
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {
-    loggedIn: true,
-    username: 'WoeStijn'
-  });
+  res.render('profile', {loggedIn: true, username: 'WoeStijn'});
 });
 
 app.get('/create', (req, res) => {
-  res.render('create', {
-    foo: 'FOO'
-  });
+  res.render('create', {foo: 'FOO'});
 });
 
 app.use(function (req, res, next) {
