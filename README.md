@@ -1,6 +1,5 @@
 # Blok-Tech
 **auteur:** Stijn van Fraeijenhove
-## Table of content
 
 ## matching feature
 
