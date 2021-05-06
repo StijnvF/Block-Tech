@@ -1,12 +1,12 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #c3ebef;
+  background-color: #c3ebef;
 }
 
 h2 {
@@ -14,6 +14,7 @@ h2 {
   justify-content: center;
   margin-top: 20%;
 }
+
 /* dit is de ccs voor het invullen van je naam */
 .name {
   margin-top: 1em;
@@ -28,11 +29,11 @@ h2 {
 }
 
 .name li input {
-width: 12em;
-border: 0px;
-border-radius: 2em;
-padding: .5em 1em .5em 1em;
-margin: .5em 0 .5em 0;
+  width: 12em;
+  border: 0px;
+  border-radius: 2em;
+  padding: .5em 1em .5em 1em;
+  margin: .5em 0 .5em 0;
 }
 
 /* dit is de css voor je leeftijd */
@@ -49,9 +50,69 @@ margin: .5em 0 .5em 0;
 }
 
 .age li input {
-width: 12em;
-border: 0px;
+  width: 12em;
+  border: 0px;
+  border-radius: 2em;
+  padding: .5em 1em .5em 1em;
+  margin: .5em 0 .5em 0;
+}
+
+
+/* dit is de ccs voor het kiezen van je favoriete keuken */
+.kitchen {
+  display: flex;
+  justify-content: center;
+}
+.kitchen div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+.kitchen div li {
+  display: flex;
+  margin-top: .5em;
+}
+
+.kitchen div li input {
+  /* display: none; */
+}
+
+.kitchen div li label {
+background-color: #7e6cfb;
 border-radius: 2em;
 padding: .5em 1em .5em 1em;
-margin: .5em 0 .5em 0;
+color: white;
+}
+
+input[type=radio]:checked + label {
+  background-color: black;
+}
+
+/* dit is de ccs voor het toevoegen van een foto */
+
+.photo {
+  display: flex;
+  justify-content: center;
+}
+
+.photo li{
+  display: flex;
+  margin-top: 1em;
+}
+
+.photo li input::-webkit-file-upload-button{
+  visibility: hidden;
+}
+
+.photo li input::before {
+  content: 'kies een foto';
+  display: inline-block;
+  background-color: #7e6cfb;;
+  border: 1px solid #999;
+  border-radius: 2em;
+  padding: .5em 1em .5em 1em;
+  color: white;
 }

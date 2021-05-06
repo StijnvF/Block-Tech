@@ -3,7 +3,7 @@
 <body>
   <form action="create">
     <section>
-      
+
       <h2>Wat is je naam?</h2>
       <ul class="name">
         <li>
@@ -15,7 +15,7 @@
           <input type="text" id="name" name="name" placeholder="Brugman">
         </li>
       </ul>
-      
+
       <h2>Wat is je leeftijd?</h2>
       <ul class="age">
         <li>
@@ -23,56 +23,60 @@
           <input type="date" id="leeftijd" name="leeftijd">
         </li>
       </ul>
-      
+
       <h2>Wat is je favoriete keuken?</h2>
-      <ul>
-        <li>
-          <label for="keuken">Italiaans</label>
-          <input type="radio" name="keuken" id="radio1">
-        </li>
-        <li>
-          <label for="keuken">Indisch</label>
-          <input type="radio" name="keuken" id="radio2">
-        </li>
-        <li>
-          <label for="keuken">Frans</label>
-          <input type="radio" name="keuken" id="radio3">
-        </li>
-        <li>
-          <label for="keuken">Spaans</label>
-          <input type="radio" name="keuken" id="radio4">
-        </li>
-        <li>
-          <label for="keuken">Grieks</label>
-          <input type="radio" name="keuken" id="radio5">
-        </li>
-        <li>
-          <label for="keuken">Mexicaans</label>
-          <input type="radio" name="keuken" id="radio6">
-        </li>
-        <li>
-          <label for="keuken">Japans</label>
-          <input type="radio" name="keuken" id="radio7">
-        </li>
-        <li>
-          <label for="keuken">Chinees</label>
-          <input type="radio" name="keuken" id="radio8">
-        </li>
-        <li>
-          <label for="keuken">Thais</label>
-          <input type="radio" name="keuken" id="radio9">
-        </li>
-        <li>
-          <label for="keuken">Indonesisch</label>
-          <input type="radio" name="keuken" id="radio10">
-        </li>
+      <ul class="kitchen">
+        <div>
+          <li>
+            <input type="radio" name="keuken" id="radio1" checked>
+            <label for="keuken">Italiaans</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio2">
+            <label for="keuken">Indisch</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio3">
+            <label for="keuken">Frans</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio4">
+            <label for="keuken">Spaans</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio5">
+            <label for="keuken">Grieks</label>
+          </li>
+        </div>
+        <div>
+          <li>
+            <input type="radio" name="keuken" id="radio6">
+            <label for="keuken">Mexicaans</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio7">
+            <label for="keuken">Japans</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio8">
+            <label for="keuken">Chinees</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio9">
+            <label for="keuken">Thais</label>
+          </li>
+          <li>
+            <input type="radio" name="keuken" id="radio10">
+            <label for="keuken">Indonesisch</label>
+          </li>
+        </div>
       </ul>
-      
+
       <h2>Voeg een foto toe</h2>
-      <ul>
+      <ul class="photo">
         <li>
-          <label for="upload">Zoek je mooiste foto's uit</label>
-          <input type="file" name="upload" id="upload" placeholder="Kies bestand"
+          <label for="upload"></label>
+          <input type="file" name="upload" id="upload"
             accept="image/png, image/jpeg, image/gif" />
         </li>
       </ul>
