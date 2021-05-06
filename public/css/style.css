@@ -109,10 +109,26 @@ input[type=radio]:checked + label {
 
 .photo li input::before {
   content: 'kies een foto';
-  display: inline-block;
+  display: flex;
   background-color: #7e6cfb;;
-  border: 1px solid #999;
   border-radius: 2em;
   padding: .5em 1em .5em 1em;
   color: white;
+  justify-content: center;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 5em;
+  margin-bottom: 3em;
+}
+
+.submit button {
+background-color: #5038bc;
+border-radius: 2em;
+padding: .5em 2em .5em 2em;
+color: white;
+border: 0;
+
 }
