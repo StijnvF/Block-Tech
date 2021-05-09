@@ -121,6 +121,3 @@ dist
 
 # DS_store
 .DS_store
-
-# Eslint
-.eslintrc.js
