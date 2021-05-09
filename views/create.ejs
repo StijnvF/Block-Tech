@@ -1,18 +1,18 @@
 <%- include('partials/head') -%>
 
 <body>
-  <form action="create">
+  <form action="create" method="post">
     <section>
 
       <h2>Wat is je naam?</h2>
       <ul class="name">
         <li>
           <label for="vname">Voornaam:</label>
-          <input type="text" id="name" name="name" placeholder="Peter">
+          <input type="text" id="firstname" name="firstname" placeholder="Peter">
         </li>
         <li>
           <label for="aname">Achternaam:</label>
-          <input type="text" id="name" name="name" placeholder="Brugman">
+          <input type="text" id="lastname" name="lastname" placeholder="Brugman">
         </li>
       </ul>
 
@@ -72,14 +72,14 @@
         </div>
       </ul>
 
-      <h2>Voeg een foto toe</h2>
+      <!-- <h2>Voeg een foto toe</h2>
       <ul class="photo">
         <li>
           <label for="upload"></label>
           <input type="file" name="upload" id="upload"
             accept="image/png, image/jpeg, image/gif" />
         </li>
-      </ul>
+      </ul> -->
     </section>
 
     <section>

@@ -6,9 +6,15 @@
   <% if (locals.users) { %>
   <% users.forEach(user => { %>
   <div>
-    <p>Username: <%= user.username %></p>
+<p>Firstname: <%= user.firstname %></p>
+<p>Lastname: <%= user.lastname %></p>
+<p>Age: <%= user.age %></p>
+<p>Keuken: <%= user.keuken %></p>
+
+
+    <!-- <p>Username: <%= user.username %></p>
     <p>Age: <%= user.age %></p>
-    <p>City: <%= user.city %></p>
+    <p>City: <%= user.city %></p> -->
   </div>
   <% }) %>
   <% } else { %>
