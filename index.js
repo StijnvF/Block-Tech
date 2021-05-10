@@ -12,13 +12,13 @@ app.use(express.urlencoded());
 const users = [{
     firstname: 'Victor',
     lastname: 'Boucher',
-    age: '01-01-1998',
+    leeftijd: '01-01-1998',
     keuken: 'japans'
   },
   {
     firstname: 'Stijn',
     lastname: 'van Fraeijenhove',
-    age: '24-02-1998',
+    leeftijd: '24-02-1998',
     keuken: 'italiaans'
   },
 ]
@@ -36,7 +36,7 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-  // console.log(req.body)
+  console.log(req.body)
   let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
   users.push(profile)
   res.render('index', {title: 'succesfully added profile' , users});
