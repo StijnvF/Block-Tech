@@ -15,12 +15,12 @@ const users = [{
     leeftijd: '01-01-1998',
     keuken: 'japans'
   },
-  {
-    firstname: 'Stijn',
-    lastname: 'van Fraeijenhove',
-    leeftijd: '24-02-1998',
-    keuken: 'italiaans'
-  },
+  // {
+  //   firstname: 'Stijn',
+  //   lastname: 'van Fraeijenhove',
+  //   leeftijd: '24-02-1998',
+  //   keuken: 'italiaans'
+  // },
 ]
 
 app.get('/', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {loggedIn: true, username: 'WoeStijn'});
+  res.render('profile', {loggedIn: true, username: 'WoeStijn', users});
 });
 
 app.get('/create', (req, res) => {
@@ -36,10 +36,10 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/create', (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
   users.push(profile)
-  res.render('index', {title: 'succesfully added profile' , users});
+  res.render('profile', {title: 'succesfully added profile' , users});
 });
 
 

@@ -2,24 +2,8 @@
 <%- include('partials/header') -%>
 
 <body>
-  <p>test</p>
-  <% if (locals.users) { %>
-  <% users.forEach(user => { %>
-  <div>
-<p>Firstname: <%= user.firstname %></p>
-<p>Lastname: <%= user.lastname %></p>
-<p>Age: <%= user.leeftijd %></p>
-<p>Keuken: <%= user.keuken %></p>
+  
 
-
-    <!-- <p>Username: <%= user.username %></p>
-    <p>Age: <%= user.age %></p>
-    <p>City: <%= user.city %></p> -->
-  </div>
-  <% }) %>
-  <% } else { %>
-  <p>No users found</p>
-  <% } %>
 </body>
 
 </html>
