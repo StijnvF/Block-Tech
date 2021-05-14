@@ -75,9 +75,9 @@ h2 {
   margin-top: .5em;
 }
 
-.kitchen div li input {
-  /* display: none; */
-}
+/* .kitchen div li input {
+  display: none;
+} */
 
 .kitchen div li label {
 background-color: #7e6cfb;
@@ -125,12 +125,12 @@ input[type=radio]:checked + label {
 
 /* dit is de css voor de button */
 .submit button {
-background-color: #5038bc;
-border-radius: 2em;
-padding: .5em 2em .5em 2em;
-color: white;
-border: 0;
-font-size: large;
+  background-color: #5038bc;
+  border-radius: 2em;
+  padding: .5em 2em .5em 2em;
+  color: white;
+  border: 0;
+  font-size: large;
 }
 
 
