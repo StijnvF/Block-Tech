@@ -148,3 +148,13 @@ input[type=radio]:checked + label {
   margin-top: 1em;
   font-size: larger;
 }
+
+
+
+.direct {
+  display: flex;
+  text-decoration: none;
+  font-size: larger;
+  justify-content: center;
+  margin-top: 5em;
+}
