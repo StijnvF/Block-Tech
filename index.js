@@ -15,12 +15,12 @@ const users = [{
     leeftijd: '01-01-1998',
     keuken: 'japans'
   },
-  // {
-  //   firstname: 'Stijn',
-  //   lastname: 'van Fraeijenhove',
-  //   leeftijd: '24-02-1998',
-  //   keuken: 'italiaans'
-  // },
+  {
+    firstname: 'Stijn',
+    lastname: 'van Fraeijenhove',
+    leeftijd: '24-02-1998',
+    keuken: 'italiaans'
+  },
 ]
 
 app.get('/', (req, res) => {
@@ -47,7 +47,6 @@ app.post('/create', (req, res) => {
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
 })
-
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
