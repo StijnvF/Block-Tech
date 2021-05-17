@@ -10,17 +10,17 @@ app.use(express.urlencoded());
 
 
 const users = [{
-    firstname: 'Victor',
-    lastname: 'Boucher',
-    leeftijd: '01-01-1998',
-    keuken: 'japans'
+  firstname: 'Stijn',
+  lastname: 'van Fraeijenhove',
+  leeftijd: '24-02-1998',
+  keuken: 'italiaans'
   },
-  {
-    firstname: 'Stijn',
-    lastname: 'van Fraeijenhove',
-    leeftijd: '24-02-1998',
-    keuken: 'italiaans'
-  },
+  // {
+  //   firstname: 'Victor',
+  //   lastname: 'Boucher',
+  //   leeftijd: '01-01-1998',
+  //   keuken: 'japans'
+  // },
 ]
 
 app.get('/', (req, res) => {
@@ -51,16 +51,3 @@ app.use(function (req, res, next) {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
-
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
-// });
-
-// app.get('/profile', (req, res) => {
-//   res.send('This will become the profile page.')
-// });
-
-// app.get('/create', (req, res) => {
-//   res.send('This will become the create profile page.')
-// });
