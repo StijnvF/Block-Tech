@@ -176,3 +176,35 @@ div .edit_button {
   font-size: large;
   margin-top: 3em;
 }
+
+/* css van de footer in mn include. */
+footer {
+  display: flex;
+  background-color: #74d3dc;
+  position: fixed;
+  bottom: 0;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+}
+
+footer ul li {
+  width: 50vw;
+  display: flex;
+  height: 4em;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+footer ul li a {
+  text-decoration: none;
+  background-color: #5038bc;
+  border-radius: 2em;
+  padding: .5em 1em .5em 1em;
+  color: white;
+  border: 0;
+}
