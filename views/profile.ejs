@@ -9,36 +9,125 @@
     <% } %> -->
     <main>
       <h2>Dit is je profiel</h2>
-      <% if (locals.users) { %>
-        <% users.forEach(user=> { %>
-          <div class="info">
-            <h3>Voornaam</h3>
-            <p>
-              <%= user.firstname %>
-            </p>
-            <h3>Achternaam</h3>
-            <p>
-              <%= user.lastname %>
-            </p>
-            <h3>Geboortedatum</h3>
-            <p>
-              <%= user.leeftijd %>
-            </p>
-            <h3>Keuken</h3>
-            <p>
-              <%= user.keuken %>
-            </p>
-          </div>
-          <% }) %>
-            <% } else { %>
-              <p>No users found</p>
-              <% } %>
 
-                <div class="edit_button">
-                  <a href="/edit">Bewerken</a>
-                </div>
+      <% if (locals.profile) { %>
+
+        <div class="info">
+          <h3>Voornaam</h3>
+          <p>
+            <%= profile.firstname %>
+          </p>
+          <h3>Achternaam</h3>
+          <p>
+            <%= profile.lastname %>
+          </p>
+          <h3>Geboortedatum</h3>
+          <p>
+            <%= profile.leeftijd %>
+          </p>
+          <h3>Keuken</h3>
+          <p>
+            <%= profile.keuken %>
+          </p>
+        </div>
+
+        <form action="toevoegen" method="post">
+          <section>
+            <h2>Wat is je naam?</h2>
+            <ul class="name">
+              <li>
+                <label for="vname">Voornaam:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Peter" value="<%= profile.firstname %>">
+              </li>
+              <li>
+                <label for="aname">Achternaam:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Brugman" value="<%= profile.lastname %>">
+              </li>
+            </ul>
+      
+            <h2>Wat is je leeftijd?</h2>
+            <ul class="age">
+              <li>
+                <label for="leeftijd">Geboorte datum:</label>
+                <input type="date" id="leeftijd" name="leeftijd" value="<%= profile.leeftijd %>">
+              </li>
+            </ul>
+      
+            <h2>Wat is je favoriete keuken?</h2>
+            <ul class="kitchen">
+              <div>
+                <li>
+                  <input type="radio" name="keuken" id="radio1" value='Italiaans' <%= profile.keuken === 'Italiaans' ? 'checked' : '' %> >
+                  <label for="radio1">Italiaans</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio2" value='Indisch' <%= profile.keuken === 'Indisch' ? 'checked' : '' %> >
+                  <label for="radio2">Indisch</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio3" value='Frans' <%= profile.keuken === 'Frans' ? 'checked' : '' %> >
+                  <label for="radio3">Frans</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio4" value='Spaans' <%= profile.keuken === 'Spaans' ? 'checked' : '' %> >
+                  <label for="radio4">Spaans</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio5" value='Grieks' <%= profile.keuken === 'Grieks' ? 'checked' : '' %> >
+                  <label for="radio5">Grieks</label>
+                </li>
+              </div>
+              <div>
+                <li>
+                  <input type="radio" name="keuken" id="radio6" value='Mexicaans' <%= profile.keuken === 'Mexicaans' ? 'checked' : '' %> >
+                  <label for="radio6">Mexicaans</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio7" value='Japans' <%= profile.keuken === 'Japans' ? 'checked' : '' %> >
+                  <label for="radio7">Japans</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio8" value='Chinees' <%= profile.keuken === 'Chinees' ? 'checked' : '' %> >
+                  <label for="radio8">Chinees</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio9" value='Thais' <%= profile.keuken === 'Thais' ? 'checked' : '' %> >
+                  <label for="radio9">Thais</label>
+                </li>
+                <li>
+                  <input type="radio" name="keuken" id="radio10" value='Indonesisch' <%= profile.keuken === 'Indonesisch' ? 'checked' : '' %> >
+                  <label for="radio10">Indonesisch</label>
+                </li>
+              </div>
+            </ul>
+      
+            <!-- <h2>Voeg een foto toe</h2>
+            <ul class="photo">
+              <li>
+                <label for="upload"></label>
+                <input type="file" name="upload" id="upload"
+                  accept="image/png, image/jpeg, image/gif" />
+              </li>
+            </ul> -->
+          </section>
+      
+          <section>
+            <div class="submit">
+            <button>submit</button>
+          </div>
+          </section>
+        </form>
+
+      <% } else { %>
+        <p>No users found</p>
+      <% } %>
+    <div>
+      <button id="editButton" class="edit_button">
+        Bewerken
+      </button>
+    </div>
     </main>
 
+    <script src="./scripts/index.js"></script>
   </body>
-
-  </html>
+</html>

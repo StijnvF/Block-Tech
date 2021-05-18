@@ -15,16 +15,16 @@ const users = [{
   leeftijd: '24-02-1998',
   keuken: 'italiaans'
   },
-  // {
-  //   firstname: 'Tom',
-  //   lastname: 'Kool',
-  //   leeftijd: '21-08-1997',
-  //   keuken: 'japans'
-  // },
+  {
+    firstname: 'Tom',
+    lastname: 'Kool',
+    leeftijd: '21-08-1997',
+    keuken: 'japans'
+  },
 ]
 //laden van de pagina's
 app.get('/', (req, res) => {
-  res.render('index', {users});
+  res.render('index', );
 });
 
 app.get('/profile', (req, res) => {
@@ -44,7 +44,7 @@ app.post('/toevoegen', (req, res) => {
   // console.log(req.body)
   let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
   users.push(profile)
-  res.render('profile', {title: 'succesfully added profile' , users});
+  res.render('profile', {title: 'succesfully added profile' , profile, editing:true});
 });
 
 //error message
