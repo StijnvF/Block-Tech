@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {loggedIn: true, username: 'WoeStijn', users});  //refactor nog hier doen
+  res.render('profile', {users});
 });
 
 app.get('/create', (req, res) => {
@@ -44,7 +44,10 @@ app.post('/toevoegen', (req, res) => {
   // console.log(req.body)
   let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
   users.push(profile)
-  res.render('profile', {title: 'succesfully added profile' , profile, editing:true});
+  res.render('profile', {
+    title: 'succesfully added profile', 
+    profile, 
+    editing:true});
 });
 
 //error message
