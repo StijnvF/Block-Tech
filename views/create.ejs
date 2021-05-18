@@ -1,5 +1,6 @@
 <!-- geen head want dit zit in de include -->
 <%- include('partials/head') -%>
+<!-- footer include met daarin een klein menutje -->
 <%- include('partials/footer') -%>
 
 <body>
@@ -7,6 +8,7 @@
   <form action="toevoegen" method="post">
     <section>
 
+      <!-- standaard input field voor voor en achternaam -->
       <h2>Wat is je naam?</h2>
       <ul class="name">
         <li>
@@ -18,7 +20,7 @@
           <input type="text" id="lastname" name="lastname" placeholder="Brugman">
         </li>
       </ul>
-
+      <!-- datum invullen voor je leeftijd -->
       <h2>Wat is je leeftijd?</h2>
       <ul class="age">
         <li>
@@ -27,6 +29,7 @@
         </li>
       </ul>
 
+      <!-- radio buttons om te kiezen wat je favoriete keuken is -->
       <h2>Wat is je favoriete keuken?</h2>
       <ul class="kitchen">
         <div>

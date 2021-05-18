@@ -8,12 +8,12 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
 
-// tijdelijke opslag variabelen, todat ik een mongoDB connectie heb.
+// tijdelijke opslag variabelen, todat ik een mongoDB connectie heb. Refactor
 const users = [{
-  firstname: 'Stijn',
-  lastname: 'van Fraeijenhove',
-  leeftijd: '24-02-1998',
-  keuken: 'italiaans'
+    firstname: 'Stijn',
+    lastname: 'van Fraeijenhove',
+    leeftijd: '24-02-1998',
+    keuken: 'italiaans'
   },
   {
     firstname: 'Tom',
@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {loggedIn: true, username: 'WoeStijn', users});
+  res.render('profile', {loggedIn: true, username: 'WoeStijn', users});  //refactor nog hier doen
 });
 
 app.get('/create', (req, res) => {

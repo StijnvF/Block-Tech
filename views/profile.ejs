@@ -1,4 +1,6 @@
+<!-- geen head want dit zit in de include -->
 <%- include('partials/head') -%>
+<!-- footer include met daarin een klein menutje -->
 <%- include('partials/footer') -%>
 
   <body>
@@ -10,7 +12,7 @@
     <% } %> -->
     <main>
       <h2>Dit is je profiel</h2>
-
+      <!-- if else, zodat je ook een bericht krijgt te zien als er geen data gevonden is. -->
       <% if (locals.profile) { %>
 
         <div class="info">
@@ -31,7 +33,7 @@
             <%= profile.keuken %>
           </p>
         </div>
-
+        <!-- form hier tijdelijk tot ik een database heb, dan kan ik de form anders gaan editen. -->
         <form action="toevoegen" method="post">
           <section>
             <h2>Wat is je naam?</h2>
@@ -118,9 +120,9 @@
           </div>
           </section>
         </form>
-
+        <!-- else statement om te laten zien dat er geen user zijn gevonden. -->
       <% } else { %>
-        <p>No users found</p>
+        <p>No user found</p>
       <% } %>
 
     <div class="editdiv">

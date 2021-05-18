@@ -15,6 +15,7 @@ h2 {
   margin-top: 20%;
 }
 
+
 /* dit is de ccs voor het invullen van je naam */
 .name {
   margin-top: 1em;
@@ -36,6 +37,7 @@ h2 {
   margin: .5em 0 .5em 0;
 }
 
+
 /* dit is de css voor je leeftijd */
 .age {
   margin-top: 1em;
@@ -56,6 +58,7 @@ h2 {
   padding: .5em 1em .5em 1em;
   margin: .5em 0 .5em 0;
 }
+
 
 /* dit is de ccs voor het kiezen van je favoriete keuken */
 .kitchen {
@@ -91,7 +94,6 @@ input[type=radio]:checked + label {
 }
 
 /* dit is de ccs voor het toevoegen van een foto */
-
 .photo {
   display: flex;
   justify-content: center;
@@ -123,6 +125,7 @@ input[type=radio]:checked + label {
   margin-bottom: 3em;
 }
 
+
 /* dit is de css voor de button */
 .submit button {
   background-color: #5038bc;
@@ -135,9 +138,7 @@ input[type=radio]:checked + label {
 }
 
 
-
 /* css voor pagina 'profile' */
-
 .info {
   display: flex;
   flex-direction: column;
@@ -176,6 +177,7 @@ input[type=radio]:checked + label {
   font-size: large;
   margin-top: 3em;
 }
+
 
 /* css van de footer in mn include. */
 footer {
