@@ -131,6 +131,7 @@ input[type=radio]:checked + label {
   color: white;
   border: 0;
   font-size: large;
+  margin-bottom: 5em;
 }
 
 
@@ -160,14 +161,13 @@ input[type=radio]:checked + label {
   margin-top: 5em;
 }
 
-div .edit_button {
+.editdiv  {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .edit_button {
-  display: flex;
   background-color: #5038bc;
   border-radius: 2em;
   padding: .5em 2em .5em 2em;
