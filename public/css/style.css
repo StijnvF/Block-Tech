@@ -154,12 +154,20 @@ input[type=radio]:checked + label {
   font-size: larger;
 }
 
-.direct {
+.test nav ul li {
   display: flex;
+  justify-content: center;
+  
+}
+
+.direct {
   text-decoration: none;
   font-size: larger;
-  justify-content: center;
   margin-top: 5em;
+  color: white;
+  background-color: #5038bc;
+  border-radius: 2em;
+  padding: .5em 2em .5em 2em;
 }
 
 .editdiv  {
