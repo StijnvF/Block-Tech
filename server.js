@@ -1,7 +1,30 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config();
+const { MongoClient } = require('mongodb')
 const port = process.env.PORT || 3000;
+
+
+let db = null;
+// function connectDB
+async function connectDB () {
+  // get URI from .env file
+  const uri = process.env.DB_URI
+  // make connection to database
+  const options = { useUnifiedTopology: true };
+  const client = new MongoClient(uri, options)
+  await client.connect();
+  db = await client.db(process.env.DB_NAME)
+}
+connectDB()
+  .then(() => {
+    // if succesfull connections is made, show a message
+    console.log('We have a connection to Mongo!')
+  })
+  .catch( error => {
+    // if connnection is unsuccesful, show errors
+    console.log(error)
+  });
 
 
 app.use(express.static('public'));
@@ -9,20 +32,23 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
 
+
+
 // tijdelijke opslag variabelen, todat ik een mongoDB connectie heb. Refactor
-const users = [{
-    firstname: 'Stijn',
-    lastname: 'van Fraeijenhove',
-    leeftijd: '24-02-1998',
-    keuken: 'italiaans'
-  },
-  {
-    firstname: 'Tom',
-    lastname: 'Kool',
-    leeftijd: '21-08-1997',
-    keuken: 'japans'
-  },
-];
+// const users = [{
+//     firstname: 'Stijn',
+//     lastname: 'van Fraeijenhove',
+//     leeftijd: '24-02-1998',
+//     keuken: 'italiaans'
+//   },
+//   {
+//     firstname: 'Tom',
+//     lastname: 'Kool',
+//     leeftijd: '21-08-1997',
+//     keuken: 'japans'
+//   },
+// ];
+
 //laden van de pagina's
 app.get('/', (req, res) => {
   res.render('index', );
