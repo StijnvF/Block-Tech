@@ -1,8 +1,10 @@
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 3000
+const express = require('express');
+const app = express();
+const dotenv = require('dotenv').config();
+const port = process.env.PORT || 3000;
 
-app.use(express.static('public'))
+
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
@@ -20,7 +22,7 @@ const users = [{
     leeftijd: '21-08-1997',
     keuken: 'japans'
   },
-]
+];
 //laden van de pagina's
 app.get('/', (req, res) => {
   res.render('index', );
@@ -52,8 +54,8 @@ app.post('/toevoegen', (req, res) => {
 //error message
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!")
-})
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})
+});
