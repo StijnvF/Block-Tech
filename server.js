@@ -4,35 +4,10 @@ const dotenv = require('dotenv').config();
 const { MongoClient } = require('mongodb')
 const port = process.env.PORT || 3000;
 
-
-let db = null;
-// function connectDB
-async function connectDB () {
-  // get URI from .env file
-  const uri = process.env.DB_URI
-  // make connection to database
-  const options = { useUnifiedTopology: true };
-  const client = new MongoClient(uri, options)
-  await client.connect();
-  db = await client.db(process.env.DB_NAME)
-}
-connectDB()
-  .then(() => {
-    // if succesfull connections is made, show a message
-    console.log('We have a connection to Mongo!')
-  })
-  .catch( error => {
-    // if connnection is unsuccesful, show errors
-    console.log(error)
-  });
-
-
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
-
-
 
 // tijdelijke opslag variabelen, todat ik een mongoDB connectie heb. Refactor
 // const users = [{
@@ -85,3 +60,26 @@ app.use(function (req, res, next) {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 });
+
+
+let db = null;
+// function connectDB
+async function connectDB () {
+  // get URI from .env file
+  const uri = process.env.DB_URI
+  // make connection to database
+  const options = { useUnifiedTopology: true };
+  const client = new MongoClient(uri, options)
+  await client.connect();
+  db = await client.db(process.env.DB_NAME)
+}
+connectDB()
+  .then(() => {
+    // if succesfull connections is made, show a message
+    console.log('We have a connection to Mongo!')
+  })
+  .catch( error => {
+    // if connnection is unsuccesful, show errors
+    console.log(error)
+  });
+
