@@ -210,7 +210,7 @@ footer ul {
 }
 
 footer ul li {
-  width: 50vw;
+  width: 33.333vw;
   display: flex;
   height: 4em;
   list-style-type: none;

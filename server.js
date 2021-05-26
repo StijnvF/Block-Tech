@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile', {users});
+  res.render('profile',);
 });
 
 app.get('/create', (req, res) => {
