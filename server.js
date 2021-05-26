@@ -10,20 +10,6 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
 
-// tijdelijke opslag variabelen, todat ik een mongoDB connectie heb. Refactor
-// const users = [{
-//     firstname: 'Stijn',
-//     lastname: 'van Fraeijenhove',
-//     leeftijd: '24-02-1998',
-//     keuken: 'italiaans'
-//   },
-//   {
-//     firstname: 'Tom',
-//     lastname: 'Kool',
-//     leeftijd: '21-08-1997',
-//     keuken: 'japans'
-//   },
-// ];
 
 //laden van de pagina's
 app.get('/', (req, res) => {
@@ -52,7 +38,6 @@ app.post('/toevoegen', async (req, res) => {
     keuken: req.body.keuken
   };
   const result = await db.collection('profile').insertOne(profile);
-  // users.push(profile)
   res.render('profile', {
     title: 'succesfully added profile', 
     profile, 
