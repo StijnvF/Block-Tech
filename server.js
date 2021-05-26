@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config();
-const { MongoClient } = require('mongodb')
+const { MongoClient } = require('mongodb');
+const { ObjectId } = require('mongodb');
 const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
@@ -42,9 +43,15 @@ app.get('/edit', (req, res) => {
 });
 
 //uitvoeren van de form en doorsturen naar profile.
-app.post('/toevoegen', (req, res) => {
+app.post('/toevoegen', async (req, res) => {
   // console.log(req.body)
-  let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
+  let profile = {
+    firstname: req.body.firstname, 
+    lastname: req.body.lastname, 
+    leeftijd: req.body.leeftijd, 
+    keuken: req.body.keuken
+  };
+  const result = await db.collection('profile').insertOne(profile);
   // users.push(profile)
   res.render('profile', {
     title: 'succesfully added profile', 
