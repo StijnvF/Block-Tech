@@ -12,7 +12,14 @@ body {
 h2 {
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 3em;
+}
+.boven {
+color: #5038bc;
+font-size: 1.75em;
+}
+.onder_boven {
+  margin-top: 1.5em;
 }
 
 
@@ -158,11 +165,14 @@ input[type=radio]:checked + label {
   display: flex;
   justify-content: center;
 }
+.test nav ul {
+  margin-top: 5em;
+}
 
 .direct {
   text-decoration: none;
   font-size: larger;
-  margin-top: 5em;
+  margin-top: 1em;
   color: white;
   background-color: #5038bc;
   border-radius: 2em;

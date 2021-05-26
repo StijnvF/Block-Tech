@@ -45,7 +45,7 @@ app.get('/edit', (req, res) => {
 app.post('/toevoegen', (req, res) => {
   // console.log(req.body)
   let profile ={firstname: req.body.firstname, lastname: req.body.lastname, leeftijd: req.body.leeftijd, keuken: req.body.keuken}
-  users.push(profile)
+  // users.push(profile)
   res.render('profile', {
     title: 'succesfully added profile', 
     profile, 
@@ -76,7 +76,7 @@ async function connectDB () {
 connectDB()
   .then(() => {
     // if succesfull connections is made, show a message
-    console.log('We have a connection to Mongo!')
+    console.log('Connection to MongoDB succesfull')
   })
   .catch( error => {
     // if connnection is unsuccesful, show errors
