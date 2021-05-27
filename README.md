@@ -4,7 +4,7 @@
 ## Description
 For our course blok-tech we have to create a feature for a matchin application. During this course we learn to work with Node.js, Git/GitHub, Express, a templating engine of your choice (in my case EJS) and MongoDB.
 
-<img src="Wiki_img/Screen Shot Readme" alt="">
+<img src="Wiki_img/Screen Shot Readme.png" alt="">
 
 ### matching feature
 During this project is started working on my first webbapplication. The concept is a feature where people get matched on basis of their favorite kitchen, and a couple of more standard thigs. This wil give you a profile wich you can then edit or delete from the database.
