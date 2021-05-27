@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded());
 
+//db connectie
 let db = null;
 // is collection van db.collection('profile)
 let profile = null;
@@ -34,6 +35,7 @@ connectDB()
     console.log(error)
   });
 
+
 //laden van de pagina's
 app.get('/', (req, res) => {
   res.render('index');
@@ -41,10 +43,10 @@ app.get('/', (req, res) => {
 
 app.get('/profile', async (req, res) => {
   const id = req.query.id
-  // if no id is available, user gets redirected and function gets an early return
+  // als er geen id wordt gevonden, dan wordt de gebruiker geredirect en krijgt de functie en vroege return
   if (!id) return res.redirect('/create')
   const userData = await profile.findOne({ _id: ObjectId(id) })
-  // if no userData is available, user gets redirected and function gets an early return
+  // als de userData niet beschikbaar is dan word de gebruiker geridirect en de functie krijgt een vroege return
   if (!userData) return res.redirect('/')
 
   res.render('profile', { profile: userData });
@@ -57,6 +59,7 @@ app.get('/create', (req, res) => {
 app.get('/edit', (req, res) => {
   res.render('edit', {title: 'edit profile'});
 });
+
 
 //uitvoeren van de form en doorsturen naar profile.
 app.post('/toevoegen', async (req, res) => {
