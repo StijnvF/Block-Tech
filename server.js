@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 app.get('/profile', async (req, res) => {
   const id = req.query.id
   // if no id is available, user gets redirected and function gets an early return
-  if (!id) return res.redirect('/')
+  if (!id) return res.redirect('/create')
   const userData = await profile.findOne({ _id: ObjectId(id) })
   // if no userData is available, user gets redirected and function gets an early return
   if (!userData) return res.redirect('/')
