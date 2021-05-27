@@ -6,6 +6,7 @@
   <body>
     <main>
       <h2>Dit is je profiel</h2>
+
       <!-- if else, zodat je ook een bericht krijgt te zien als er geen data gevonden is. -->
       <% if (locals.profile) { %>
 
@@ -27,8 +28,10 @@
             <%= profile.keuken %>
           </p>
         </div>
+
         <!-- form hier tijdelijk tot ik een database heb, dan kan ik de form anders gaan editen. -->
-        <form action="toevoegen" method="post">
+
+        <form action="/toevoegen?id=<%= profile._id %>" method="post">
           <section>
             <h2>Wat is je naam?</h2>
             <ul class="name">
@@ -106,6 +109,7 @@
                   accept="image/png, image/jpeg, image/gif" />
               </li>
             </ul> -->
+
           </section>
       
           <section>
@@ -114,10 +118,12 @@
           </div>
           </section>
         </form>
-        <!-- else statement om te laten zien dat er geen user zijn gevonden. -->
+
+       
+     <!-- else statement om te laten zien dat er geen user zijn gevonden. -->
       <% } else { %>
         <p>No user found</p>
-      <% } %>
+      <% } %> 
 
     <div class="editdiv">
       <button id="editButton" class="edit_button">
