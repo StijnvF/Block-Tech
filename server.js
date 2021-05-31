@@ -79,9 +79,9 @@ app.post('/toevoegen', async (req, res) => {
     res.redirect(`/profile?id=${id}`)
     return
   }
-
+//toevoegen van een nieuwe gebruiker
   const result = await profile.insertOne(userData);
-    
+   //insertedId komt terug uit de result variabele, dat is de objectId van de gebruiker, die geef ik weer mee in line 86
   if (!result.insertedId) return res.redirect('/')
   res.redirect(`/profile?id=${result.insertedId}`)
 });
