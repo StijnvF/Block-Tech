@@ -101,7 +101,7 @@ input[type=radio]:checked + label {
 }
 
 /* dit is de ccs voor het toevoegen van een foto */
-.photo {
+/* .photo {
   display: flex;
   justify-content: center;
 }
@@ -123,7 +123,7 @@ input[type=radio]:checked + label {
   padding: .5em 1em .5em 1em;
   color: white;
   justify-content: center;
-}
+} */
 
 .submit {
   display: flex;
@@ -226,9 +226,19 @@ footer ul li a {
   padding: .5em 1em .5em 1em;
   color: white;
   border: 0;
+  position: relative;
+}
+footer ul li a:hover {
+  background-color:#c3ebef;
+}
+
+footer ul li a:active {
+  background-color: #7e6cfb;
+  top: 2px
 }
 
 p {
   text-align: center;
   color: red;
 }
+
