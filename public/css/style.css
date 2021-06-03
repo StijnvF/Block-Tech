@@ -209,6 +209,9 @@ footer ul li a:active {
   background-color: #7e6cfb;
   top: 2px
 }
+.active {
+  background-color: #7e6cfb;
+}
 
 p {
   text-align: center;
