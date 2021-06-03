@@ -14,11 +14,11 @@
       <ul class="name">
         <li>
           <label for="vname">Voornaam:</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Peter">
+          <input id="firstname" type="text" id="firstname" name="firstname" placeholder="Peter" required>
         </li>
         <li>
           <label for="aname">Achternaam:</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Brugman">
+          <input id="lastname" type="text" id="lastname" name="lastname" placeholder="Brugman" required>
         </li>
       </ul>
       <!-- datum invullen voor je leeftijd -->
@@ -91,11 +91,11 @@
 
     <section>
       <div class="submit">
-      <button>submit</button>
+      <button type="submit" id="submitButton">submit</button>
     </div>
     </section>
   </form>
-  <!-- <script src="./scripts/index.js"></script> -->
+  <script src="./scripts/create.js"></script>
 </body>
 
 </html>

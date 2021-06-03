@@ -159,6 +159,7 @@ input[type=radio]:checked + label {
 .info p {
   margin-top: .5em;
   font-size: larger;
+  color: black;
 }
 
 .test nav ul li {
@@ -225,4 +226,9 @@ footer ul li a {
   padding: .5em 1em .5em 1em;
   color: white;
   border: 0;
+}
+
+p {
+  text-align: center;
+  color: red;
 }
