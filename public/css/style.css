@@ -100,30 +100,6 @@ input[type=radio]:checked + label {
   background-color: black;
 }
 
-/* dit is de ccs voor het toevoegen van een foto */
-/* .photo {
-  display: flex;
-  justify-content: center;
-}
-
-.photo li{
-  display: flex;
-  margin-top: 1em;
-}
-
-.photo li input::-webkit-file-upload-button{
-  visibility: hidden;
-}
-
-.photo li input::before {
-  content: 'kies een foto';
-  display: flex;
-  background-color: #7e6cfb;;
-  border-radius: 2em;
-  padding: .5em 1em .5em 1em;
-  color: white;
-  justify-content: center;
-} */
 
 .submit {
   display: flex;
@@ -228,9 +204,6 @@ footer ul li a {
   border: 0;
   position: relative;
 }
-footer ul li a:hover {
-  background-color:#c3ebef;
-}
 
 footer ul li a:active {
   background-color: #7e6cfb;
@@ -242,3 +215,16 @@ p {
   color: red;
 }
 
+.gradient {
+  background-image:linear-gradient(to right, rgb(64, 255, 255), rgb(88, 17, 158)) ;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.achter {
+  background: rgb(165,56,207);
+  background: linear-gradient(90deg, rgba(165,56,207,.5) 0%, rgba(101,237,245,.5) 100%);
+
+}
