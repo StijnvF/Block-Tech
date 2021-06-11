@@ -209,9 +209,6 @@ footer ul li a:active {
   background-color: #7e6cfb;
   top: 2px
 }
-.active {
-  background-color: #7e6cfb;
-}
 
 p {
   text-align: center;
@@ -229,5 +226,4 @@ p {
 .achter {
   background: rgb(165,56,207);
   background: linear-gradient(90deg, rgba(165,56,207,.5) 0%, rgba(101,237,245,.5) 100%);
-
 }
