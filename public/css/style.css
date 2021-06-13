@@ -85,9 +85,9 @@ font-size: 1.75em;
   margin-top: .5em;
 }
 
-/* .kitchen div li input {
+.kitchen div li input {
   display: none;
-} */
+}
 
 .kitchen div li label {
 background-color: #7e6cfb;
@@ -101,6 +101,7 @@ input[type=radio]:checked + label {
 }
 
 
+/* dit is de css voor de button */
 .submit {
   display: flex;
   justify-content: center;
@@ -108,8 +109,6 @@ input[type=radio]:checked + label {
   margin-bottom: 3em;
 }
 
-
-/* dit is de css voor de button */
 .submit button {
   background-color: #5038bc;
   border-radius: 2em;
@@ -215,6 +214,8 @@ p {
   color: red;
 }
 
+
+/* index pagina */
 .gradient {
   background-image:linear-gradient(to right, rgb(64, 255, 255), rgb(88, 17, 158)) ;
   -webkit-background-clip: text;
