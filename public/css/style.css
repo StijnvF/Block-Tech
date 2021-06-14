@@ -14,10 +14,12 @@ h2 {
   justify-content: center;
   margin-top: 3em;
 }
+
 .boven {
-color: #5038bc;
-font-size: 1.75em;
+  color: #5038bc;
+  font-size: 1.75em;
 }
+
 .onder_boven {
   margin-top: 1.5em;
 }
@@ -72,7 +74,8 @@ font-size: 1.75em;
   display: flex;
   justify-content: center;
 }
-.kitchen div{
+
+.kitchen div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,6 +83,7 @@ font-size: 1.75em;
   margin-right: 1em;
   margin-top: 1em;
 }
+
 .kitchen div li {
   display: flex;
   margin-top: .5em;
@@ -90,13 +94,13 @@ font-size: 1.75em;
 }
 
 .kitchen div li label {
-background-color: #7e6cfb;
-border-radius: 2em;
-padding: .5em 1em .5em 1em;
-color: white;
+  background-color: #7e6cfb;
+  border-radius: 2em;
+  padding: .5em 1em .5em 1em;
+  color: white;
 }
 
-input[type=radio]:checked + label {
+input[type=radio]:checked+label {
   background-color: black;
 }
 
@@ -127,10 +131,12 @@ input[type=radio]:checked + label {
   align-items: center;
   margin-top: 3em;
 }
-.info h3{
+
+.info h3 {
   margin-top: 1em;
   color: #7e6cfb;
 }
+
 .info p {
   margin-top: .5em;
   font-size: larger;
@@ -141,6 +147,7 @@ input[type=radio]:checked + label {
   display: flex;
   justify-content: center;
 }
+
 .test nav ul {
   margin-top: 5em;
 }
@@ -155,7 +162,7 @@ input[type=radio]:checked + label {
   padding: .5em 2em .5em 2em;
 }
 
-.editdiv  {
+.editdiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +224,7 @@ p {
 
 /* index pagina */
 .gradient {
-  background-image:linear-gradient(to right, rgb(64, 255, 255), rgb(88, 17, 158)) ;
+  background-image: linear-gradient(to right, rgb(64, 255, 255), rgb(88, 17, 158));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2.5em;
@@ -225,6 +232,6 @@ p {
 }
 
 .achter {
-  background: rgb(165,56,207);
-  background: linear-gradient(90deg, rgba(165,56,207,.5) 0%, rgba(101,237,245,.5) 100%);
+  background: rgb(165, 56, 207);
+  background: linear-gradient(90deg, rgba(165, 56, 207, .5) 0%, rgba(101, 237, 245, .5) 100%);
 }
