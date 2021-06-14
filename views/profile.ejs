@@ -8,7 +8,7 @@
       <!-- if else, zodat je ook een bericht krijgt te zien als er geen data gevonden is. -->
       <% if (locals.profile) { %>
 
-        <div class="info">
+        <section class="info">
           <h2 class="boven">Dit is je profiel</h2>
           <h3>Voornaam</h3>
           <p>
@@ -26,12 +26,12 @@
           <p>
             <%= profile.keuken %>
           </p>
-        </div>
+        </section>
 
         <!-- form hier tijdelijk tot ik een database heb, dan kan ik de form anders gaan editen. -->
-
         <form action="/toevoegen?id=<%= profile._id %>" method="post">
           <h2 class="boven">Je kan nu je profiel bewerken</h2>
+          
           <section>
             <h2>Wat is je naam?</h2>
             <ul class="name">
@@ -100,7 +100,6 @@
                 </li>
               </div>
             </ul>
-
           </section>
       
           <section>
