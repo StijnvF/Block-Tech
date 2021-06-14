@@ -56,10 +56,6 @@ app.get('/create', (req, res) => {
   res.render('create', {title: 'create profile'});
 });
 
-app.get('/edit', (req, res) => {
-  res.render('edit', {title: 'edit profile'});
-});
-
 
 //uitvoeren van de form en doorsturen naar profile.
 app.post('/toevoegen', async (req, res) => {
