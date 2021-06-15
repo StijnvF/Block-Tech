@@ -15,9 +15,9 @@ function validate() {
   }
   // als de achternaam minder of gelijk is aan 2 dan komt daar een melding van onderaan de pagina. 
   if (lastname == null || lastname.length <= 2) {
-    const wwError = document.createElement("p");
-    wwError.textContent = "De achternaam moet langer of gelijk zijn aan 2 karakters!";
-    document.body.appendChild(wwError);
+    const lastnameError = document.createElement("p");
+    lastnameError.textContent = "De achternaam moet langer of gelijk zijn aan 2 karakters!";
+    document.body.appendChild(lastnameError);
     return false;
   }
   return (true);
