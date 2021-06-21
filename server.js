@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv').config();
 const { MongoClient, ObjectId } = require('mongodb');
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
