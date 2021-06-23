@@ -132,8 +132,20 @@
       </button>
     </div>
   </main>
+
+   <!-- footer nu hier en niet in de include omdat ik er niet uit kwam hoe ik dat moest oplossen. -->
+  <footer>
+    <nav>
+      <ul id="state">
+        <li><a href="/">Home</a></li>
+        <li><a  href="/create">Create</a></li>
+        <li><a class="active" href="/profile">Profiel</a></li>
+      </ul>
+    </nav>
+  </footer>
+  
   <!-- footer include met daarin een klein menutje -->
-  <%- include('partials/footer') -%>
+  
   <script src="./scripts/index.js"></script>
   <script src="./scripts/create.js"></script>
 </body>

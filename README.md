@@ -6,21 +6,21 @@ For our course blok-tech we have to create a feature for a matchin application. 
 
 <img src="Wiki_img/Screen Shot Readme.png" alt="">
 
-### matching feature
+### Matching feature
 During this project is started working on my first webbapplication. I called it "BijSmaak" and the concept is a feature where people get matched on basis of their favorite kitchen, and a couple of more standard thigs. This wil give you a profile wich you can then edit or delete from the database. I fully foccused on this feature of the application.
 
 
 ## Getting started
 To install this project you will need to install node, if you already installed node skip to **Install project**.
 
-### install node
+### Install node
 * In your terminal run the following code:
 ```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash```
 * To check if the installation is succesful run ```nvm --version``` if a number is printed the installation was succeeded.
 * Restart your terminal and run ```nvm install stable``` to install node.
 * node is now installed. you can check this by running  ``` npm --version``` and ```node --version```
 
-### install project
+### Install project
 * Clone repository to your local directory using `git clone https://github.com/StijnvF/Block-Tech` .
 * Install the neccesary packages with `npm install` .
 * Create your own database with MongoDB to connect with.

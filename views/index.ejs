@@ -6,8 +6,20 @@
 
   <!-- header met daar in een link naar de volgend pagina. -->
   <%- include('partials/header') -%>
+
+  <!-- footer nu hier en niet in de include omdat ik er niet uit kwam hoe ik dat moest oplossen. -->
+  <footer>
+    <nav>
+      <ul id="state">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a href="/create">Create</a></li>
+        <li><a href="/profile">Profiel</a></li>
+      </ul>
+    </nav>
+  </footer>
+
   <!-- footer include met daarin bottom bar menu -->
-  <%- include('partials/footer') -%>
+  
 </body>
 
 </html>

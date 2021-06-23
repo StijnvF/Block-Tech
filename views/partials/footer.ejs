@@ -2,16 +2,36 @@
 <html lang="en">
 <!-- klein menutje om naar de pagina's te navigeren. -->
 
-<body>
+<!-- geprobeerd om de active states via hier op te lossen. hier ben ik alleen niet meer uitgekomen. -->
+
+<!-- <body>
   <footer>
     <nav>
       <ul id="state">
-        <li><a href="/">Home</a></li>
-        <li><a href="/create">Create</a></li>
-        <li><a href="/profile">Profiel</a></li>
+        <li>
+          <% if (page_name === 'main') { %>
+            class="active"
+            <%} else { %>
+            class="nav-item"
+            <% } %> >
+          <a href="/">Home</a></li>
+        <li>
+          <% if (page_name === 'maken') { %>
+            class="active"
+            <%} else { %>
+            class="nav-item"
+            <% } %> >
+          <a href="/create">Create</a></li>
+        <li>
+          <% if (page_name === 'profiel') { %>
+            class="active"
+            <%} else { %>
+            class="nav-item"
+            <% } %> >
+          <a href="/profile">Profiel</a></li>
       </ul>
     </nav>
   </footer>
-</body>
+</body> -->
 
 </html>
